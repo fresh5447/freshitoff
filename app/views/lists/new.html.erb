@@ -1,0 +1,16 @@
+<%= form_for @list do |form| %>
+<% if @list.errors.any? %>
+    <div>
+      <h4>There are <%= pluralize(@list.errors.count, "error") %>.</h4>
+      <ul>
+        <% @list.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <%= form.text_field :name, placeholder: 'Name that list' %>
+  
+  <%= form.submit 'Save' %>
+<% end %>

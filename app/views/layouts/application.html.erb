@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= csrf_meta_tags %>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="page-header">
+      <h1>Freshitoff <small>A simple app for tracking your 'To-Do' list</small></h1>
+        </div>
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag "application" %>
+  </body>
+  
+</html>
